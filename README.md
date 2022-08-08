@@ -19,7 +19,7 @@ After finding these edges, the program calls the <i>IsGraphConnected</i> functio
 from one of the vertices of the induced subgraph and compares the number of vertices traversed in the widthwise search with
 by the number of vertices of the induced graph. If the numbers match - subgraph yoke.
 
-[First image]
+![First Image](https://github.com/devJUKI/MATLAB-ConnectedGraph/blob/main/img1.png)
 
 The first figure shows an induced subgraph with vertices 3, 6 and 8, which in the given
 graph is not connected because vertex 3 does not belong to the same connecting component as 6 and 8, and in the second
