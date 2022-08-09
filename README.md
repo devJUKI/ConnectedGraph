@@ -5,34 +5,23 @@ MatLab script that determines whether the specified subset of vertices in the gi
 
 ## Task analysis
 
-A connected graph is a graph that consists of one connected component. The connected component of the graph,
-is a subgraph of a graph that includes all vertices that connect to each other.
+A connected graph is a graph with a single connected component. A connected component of a graph, is a subgraph of a graph that includes all vertices that connect to each other.
 
-The program will process the recorded edges of the graph, given the vertices that induce the graph and output
-the subgraph showing the answer or the induction is a yoke, along with the computation time and the graph
-a visualization where the highlighted nodes and edges will show the induced subgraph that the program
-analyzes.
+The program will process the graph's edges, vertices that induce the graph and output a response indicating whether the induced subgraph is connected, together with the computation time and visualisation of the graph where the nodes and edges are highlighted to show the induced subgraph that the program is analysing.
 
-First, the program will search for the edges of the induced subgraph using
-<i>GetInducedGraphEdges</i> function. This function loops through all the edges of the underlying graph and
-checks if both vertices of an edge belong to the vertices that induce the subgraph.
+First, the program will search for the edges of the induced subgraph using <i>GetInducedGraphEdges</i> function. This function loops through all the edges of the underlying graph and checks whether both vertices of an edge belong to vertices that induce a subgraph. 
 
-After finding these edges, the program calls the <i>IsGraphConnected</i> function, which performs a breadth-first search
-from one of the vertices of the induced subgraph and compares the number of vertices traversed in the widthwise search with
-by the number of vertices of the induced graph. If the numbers match - subgraph yoke.
+When these edges are found, the program calls the <i>IsGraphConnected</i> function, which performs breadth-first search from one of the vertices of the induced subgraph and compares the number of vertices traversed in the breadth-first search with the number of vertices in the induced graph. If the numbers match, the subgraph is connected.
 
 <p align="center">
   <img src="https://github.com/devJUKI/MATLAB-ConnectedGraph/blob/main/img1.png" alt="drawing" width="700"/>
 </p>
   
-The first figure shows an induced subgraph with vertices 3, 6 and 8, which in the given
-graph is not connected because vertex 3 does not belong to the same connecting component as 6 and 8, and in the second
-the induced subgraph in the figure is a yoke because the vertices of this subgraph are 3, 4, 6, and 8. Vertex 4 allowed
-for vertex 3 to join vertices 6 and 8, making the induced subgraph a yoke.
+The first figure shows an induced subgraph with vertices 3, 6 and 8, which in the given graph is not connected because vertex 3 does not belong to the same connected component as vertices 6 and 8, and the induced subgraph in the second figure is connected because vertices 3, 4, 6 and 8 are in the same subgraph. Vertex 4 allowed vertex 3 to connect to vertices 6 and 8, making the induced subgraph connected.
 
 ## Test samples
 
-Three tests were used to demonstrate the performance of this program. In one of them, the program should have found
-that the induced subgraph is connected and the other two are disjoint.
+Here are 3 tests, to show how this program is working. In one of them, the program had to find, that the induced subgraph is connected and the other two are not connected.
 
-### First test (without subgraph)
+### First test (not connected subgraph)
+
