@@ -25,3 +25,52 @@ Here are 3 tests, to show how this program is working. In one of them, the progr
 
 ### First test (not connected subgraph)
 
+<p align="center">
+  <img src="https://github.com/devJUKI/MATLAB-ConnectedGraph/blob/main/img2.png" alt="drawing" width="400"/>
+</p>
+
+#### Input:
+
+Number of vertices
+
+        n = 8;
+
+Edge matrix
+
+        U = [1 2; 1 3; 1 5; 2 4; 2 6; 3 7; 4 5; 4 8; 6 4; 6 8; 7 1];
+
+Vertex set of the induced graph
+
+        vi = [2 3 5];
+
+#### Output (translated)
+
+        The induced graph is not connected
+        Calculation time:
+        0.0014
+        
+### Second test (connected subgraph)
+
+<p align="center">
+  <img src="https://github.com/devJUKI/MATLAB-ConnectedGraph/blob/main/img3.png" alt="drawing" width="400"/>
+</p>
+
+#### Input:
+
+Number of vertices
+
+        n = 8;
+
+Edge matrix
+
+        U = [1 2; 1 3; 1 5; 2 4; 2 6; 3 7; 4 5; 4 8; 6 4; 6 8; 7 1];
+
+Vertex set of the induced graph
+
+        vi = [1 2 3 5 6 8];
+
+#### Output (translated)
+
+        The induced graph is connected
+        Calculation time:
+        0.0034
