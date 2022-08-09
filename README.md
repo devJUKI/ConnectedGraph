@@ -74,3 +74,29 @@ Vertex set of the induced graph
         The induced graph is connected
         Calculation time:
         0.0034
+
+### Third test (not connected subgraph)
+
+<p align="center">
+  <img src="https://github.com/devJUKI/MATLAB-ConnectedGraph/blob/main/img4.png" alt="drawing" width="400"/>
+</p>
+
+#### Input:
+
+Number of vertices
+
+        n = 10;
+
+Edge matrix
+
+        U = [1 2; 1 5; 2 4; 3 7; 3 8; 4 5; 4 7; 4 9; 6 4; 6 8; 6 10; 7 1; 9 10];
+
+Vertex set of the induced graph
+
+        vi = [1 2 3 5 6 8];
+
+#### Output (translated)
+
+        The induced graph is not connected
+        Calculation time:
+        0.0033
